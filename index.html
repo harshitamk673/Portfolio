@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Harshita M Kolakur | Portfolio</title>
+
+
+
+<style>
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+    font-family:'Poppins',sans-serif;
+
+    scroll-behavior:smooth;
+
+}
+
+
+
+body{
+
+    background:#0f172a;
+
+    color:#fff;
+
+}
+
+
+
+/* Navbar */
+
+nav{
+
+    position:fixed;
+
+    width:100%;
+
+    top:0;
+
+    background:rgba(15,23,42,0.95);
+
+    padding:15px 8%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    z-index:1000;
+
+}
+
+
+
+.logo{
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    color:#38bdf8;
+
+}
+
+
+
+nav ul{
+
+    display:flex;
+
+    list-style:none;
+
+}
+
+
+
+nav ul li{
+
+    margin-left:25px;
+
+}
+
+
+
+nav ul li a{
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:0.3s;
+
+}
+
+
+
+nav ul li a:hover{
+
+    color:#38bdf8;
+
+}
+
+
+
+/* Hero Section */
+
+.hero{
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:20px;
+
+    background:linear-gradient(rgba(15,23,42,0.8),rgba(15,23,42,0.9)),
+
+               url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=1200');
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+
+
+.hero-content h1{
+
+    font-size:4rem;
+
+}
+
+
+
+.hero-content span{
+
+    color:#38bdf8;
+
+}
+
+
+
+.hero-content p{
+
+    margin:20px 0;
+
+    font-size:1.2rem;
+
+    color:#cbd5e1;
+
+}
+
+
+
+.btn{
+
+    display:inline-block;
+
+    padding:12px 30px;
+
+    background:#38bdf8;
+
+    color:#000;
+
+    text-decoration:none;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+
+
+.btn:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+
+/* Sections */
+
+section{
+
+    padding:80px 10%;
+
+}
+
+
+
+.section-title{
+
+    text-align:center;
+
+    font-size:2.5rem;
+
+    color:#38bdf8;
+
+    margin-bottom:40px;
+
+}
+
+
+
+/* About */
+
+.about{
+
+    text-align:center;
+
+    max-width:900px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+    color:#cbd5e1;
+
+}
+
+
+
+/* Skills */
+
+.skills-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+
+    gap:20px;
+
+}
+
+
+
+.skill{
+
+    background:#1e293b;
+
+    padding:20px;
+
+    text-align:center;
+
+    border-radius:10px;
+
+    transition:.3s;
+
+}
+
+
+
+.skill:hover{
+
+    transform:translateY(-10px);
+
+    background:#38bdf8;
+
+    color:#000;
+
+}
+
+
+
+/* Projects */
+
+.projects{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:25px;
+
+}
+
+
+
+.card{
+
+    background:#1e293b;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    transition:.3s;
+
+}
+
+
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+
+.card h3{
+
+    color:#38bdf8;
+
+    margin-bottom:10px;
+
+}
+
+
+
+/* Education */
+
+.edu-card{
+
+    background:#1e293b;
+
+    padding:20px;
+
+    border-radius:10px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+/* Contact */
+
+.contact{
+
+    text-align:center;
+
+}
+
+
+
+.contact p{
+
+    margin:10px 0;
+
+    color:#cbd5e1;
+
+}
+
+
+
+.contact a{
+
+    color:#38bdf8;
+
+    text-decoration:none;
+
+}
+
+
+
+footer{
+
+    text-align:center;
+
+    padding:20px;
+
+    background:#020617;
+
+    color:#94a3b8;
+
+}
+
+
+
+@media(max-width:768px){
+
+    .hero-content h1{
+
+        font-size:2.5rem;
+
+    }
+
+
+
+    nav{
+
+        flex-direction:column;
+
+    }
+
+
+
+    nav ul{
+
+        margin-top:10px;
+
+    }
+
+
+
+    nav ul li{
+
+        margin:0 10px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+<!-- Navigation -->
+
+<nav>
+
+    <div class="logo">Portfolio</div>
+
+    <ul>
+
+        <li><a href="#about">About</a></li>
+
+        <li><a href="#skills">Skills</a></li>
+
+        <li><a href="#projects">Projects</a></li>
+
+        <li><a href="#education">Education</a></li>
+
+        <li><a href="#contact">Contact</a></li>
+
+    </ul>
+
+</nav>
+
+
+
+<!-- Hero -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>Hi, I'm <span>Harshita M Kolakur</span></h1>
+
+        <p>Full Stack Developer | MCA Student | Python Enthusiast</p>
+
+        <a href="#contact" class="btn">Hire Me</a>
+
+    </div>
+
+</section>
+
+
+
+<!-- About -->
+
+<section id="about">
+
+    <h2 class="section-title">About Me</h2>
+
+    <div class="about">
+
+        <p>
+
+            Aspiring Software Developer with a strong foundation in Full Stack Development.
+
+            Passionate about building scalable applications and solving real-world problems.
+
+            Skilled in Python, Java, React.js, MySQL, MongoDB and modern web technologies.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- Skills -->
+
+<section id="skills">
+
+    <h2 class="section-title">Skills</h2>
+
+
+
+    <div class="skills-container">
+
+        <div class="skill">Python</div>
+
+        <div class="skill">Java</div>
+
+        <div class="skill">C</div>
+
+        <div class="skill">HTML5</div>
+
+        <div class="skill">CSS3</div>
+
+        <div class="skill">JavaScript</div>
+
+        <div class="skill">React.js</div>
+
+        <div class="skill">MySQL</div>
+
+        <div class="skill">MongoDB</div>
+
+        <div class="skill">GitHub</div>
+
+        <div class="skill">REST API</div>
+
+        <div class="skill">Machine Learning</div>
+
+    </div>
+
+</section>
+
+
+
+<!-- Projects -->
+
+<section id="projects">
+
+    <h2 class="section-title">Projects</h2>
+
+
+
+    <div class="projects">
+
+
+
+        <div class="card">
+
+            <h3>Personal Financial Tracking System</h3>
+
+            <p>
+
+                Developed a full-stack application using React.js, Python, and MySQL.
+
+                Built REST APIs for authentication and expense management with real-time tracking.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <h3>Privacy-Preserving Cloud Data System</h3>
+
+            <p>
+
+                Implemented machine learning with differential privacy techniques for secure cloud storage and data protection.
+
+            </p>
+
+        </div>
+
+
+
+    </div>
+
+</section>
+
+
+
+<!-- Education -->
+
+<section id="education">
+
+    <h2 class="section-title">Education</h2>
+
+
+
+    <div class="edu-card">
+
+        <h3>MCA</h3>
+
+        <p>BMS Institute of Technology and Management</p>
+
+        <p>2025 - 2027</p>
+
+    </div>
+
+
+
+    <div class="edu-card">
+
+        <h3>BCA</h3>
+
+        <p>Karnataka State Akkamahadevi Women University</p>
+
+        <p>CGPA: 8.88</p>
+
+    </div>
+
+
+
+</section>
+
+
+
+<!-- Contact -->
+
+<section id="contact">
+
+    <h2 class="section-title">Contact Me</h2>
+
+
+
+    <div class="contact">
+
+        <p>📍 Bengaluru, India</p>
+
+        <p>📧 harshitamk2003@gmail.com</p>
+
+        <p>📱 +91 6360355606</p>
+
+        <p>
+
+            LinkedIn:
+
+            <a href="https://www.linkedin.com/in/harshita-mk" target="_blank">
+
+                linkedin.com/in/harshita-mk
+
+            </a>
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<footer>
+
+    <p>© 2026 Harshita M Kolakur. All Rights Reserved.</p>
+
+</footer>
+
+
+
+</body>
+
+</html>
